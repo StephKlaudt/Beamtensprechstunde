@@ -1,0 +1,1389 @@
+[beamten_intranet_komplett_120526_index.html](https://github.com/user-attachments/files/27645391/beamten_intranet_komplett_120526_index.html)
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beamten-Portal - Deine zentrale Informationsplattform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'TeleNeo', 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #262626;
+            background-color: #f5f5f5;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #E20074 0%, #B5006D 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+        
+        .nav-bar {
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-bar ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+        
+        .nav-bar a {
+            color: #262626;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        
+        .nav-bar a:hover {
+            background: #E20074;
+            color: white;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .section {
+            background: white;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 2rem;
+        }
+        
+        .section h2 {
+            color: #E20074;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #E20074;
+        }
+        
+        .section h3 {
+            color: #262626;
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem 0;
+            font-weight: 600;
+        }
+        
+        .section h4 {
+            color: #E20074;
+            font-size: 1.2rem;
+            margin: 1rem 0 0.5rem 0;
+            font-weight: 600;
+        }
+        
+        .info-box {
+            background: #f0f0ff;
+            border-left: 4px solid #17a2b8;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+        
+        .important-box {
+            background: #ffe6f0;
+            border-left: 4px solid #E20074;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+        
+        .success-box {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: white;
+        }
+        
+        table th {
+            background: #E20074;
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e6e6e6;
+        }
+        
+        table tr:hover {
+            background: #f8f8f8;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #E20074;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: #B5006D;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(226, 0, 116, 0.3);
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+        }
+        
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .card {
+            background: white;
+            border: 2px solid #e6e6e6;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s;
+        }
+        
+        .card:hover {
+            border-color: #E20074;
+            box-shadow: 0 4px 12px rgba(226, 0, 116, 0.15);
+            transform: translateY(-4px);
+        }
+        
+        .card h4 {
+            margin-top: 0;
+        }
+        
+        ul, ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+        
+        li {
+            margin: 0.5rem 0;
+        }
+        
+        .footer {
+            background: #262626;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+        
+        .faq-item {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-left: 4px solid #E20074;
+        }
+        
+        .faq-item h4 {
+            color: #E20074;
+            margin-top: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .nav-bar ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🏛️ Beamten-Portal</h1>
+        <p>Deine zentrale Informationsplattform für Besoldung, Versorgung und Karriere</p>
+    </div>
+
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="#besoldung">Besoldung</a></li>
+            <li><a href="#beihilfe">Beihilfe</a></li>
+            <li><a href="#atz">Altersteilzeit</a></li>
+            <li><a href="#versorgung">Versorgung</a></li>
+            <li><a href="#ausbildungszeiten">Ausbildungszeiten</a></li>
+            <li><a href="#krankenversicherung">Krankenversicherung</a></li>
+            <li><a href="#er">Engagierter Ruhestand</a></li>
+            <li><a href="#karriere">Karriere</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        
+        <!-- ========== BESOLDUNG ========== -->
+        <section id="besoldung" class="section">
+            <h2>💰 Besoldung</h2>
+            
+            <div class="important-box">
+                <strong>📌 Wichtig:</strong> Als DTAG-Beamter gelten unterschiedliche Besoldungstabellen je nach Status!
+            </div>
+            
+            <h3>Welche Besoldungstabelle gilt für dich?</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dein Status</th>
+                        <th>Gültige Besoldungstabelle</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Aktiv bei DTAG / Nach Insichbeurlaubung (ISB)</strong></td>
+                        <td>PNU (PostNachfolgeunternehmen)</td>
+                        <td><a href="https://oeffentlicher-dienst.info/beamte/post/" class="btn btn-secondary" target="_blank">Zu den PNU-Tabellen</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Im Ruhestand / Pension</strong></td>
+                        <td>Bund</td>
+                        <td><a href="https://oeffentlicher-dienst.info/beamte/bund/" class="btn btn-secondary" target="_blank">Zu den Bund-Tabellen</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="warning-box">
+                <strong>⚠️ WICHTIG FÜR DEINE RUHESTANDSPLANUNG:</strong><br>
+                Verwende bei allen Berechnungen für deinen Ruhestand <strong>immer die Bundestabelle</strong>, da diese ab Ruhestandsbeginn gilt – nicht die PNU-Tabelle! Ein häufiger Fehler ist, mit der falschen Tabelle zu rechnen.
+            </div>
+            
+            <h3>Zusammensetzung deiner Besoldung</h3>
+            
+            <div class="grid">
+                <div class="card">
+                    <h4>Grundgehalt</h4>
+                    <p>Abhängig von deiner Besoldungsgruppe und Erfahrungsstufe. Steigt automatisch nach festgelegten Zeiträumen.</p>
+                </div>
+                <div class="card">
+                    <h4>Familienzuschlag</h4>
+                    <p>Stufe 1: Bei Verheirateten (171,28 €)<br>
+                    Stufe 2: Mit Kind(ern) (317,66 € + Erhöhungen)</p>
+                </div>
+                <div class="card">
+                    <h4>Amtszulagen</h4>
+                    <p>Abhängig von deiner konkreten Position und Funktion (z.B. Abteilungsleitung).</p>
+                </div>
+                <div class="card">
+                    <h4>Stellenzulagen</h4>
+                    <p>Besondere Zulagen für bestimmte Tätigkeiten (z.B. Schichtdienst, Wechselschicht).</p>
+                </div>
+            </div>
+            
+            <h3>Aktuelle Besoldung (Stand: März 2024)</h3>
+            <p>Die letzte Besoldungsanpassung erfolgte zum <strong>1. März 2024</strong>. Die nächste Anpassung wird voraussichtlich 2025 erfolgen.</p>
+            
+            <a href="https://oeffentlicher-dienst.info/beamte/" class="btn" target="_blank">📊 Aktuelle Besoldungstabellen</a>
+        </section>
+
+        <!-- ========== BEIHILFE ========== -->
+        <section id="beihilfe" class="section">
+            <h2>🏥 Beihilfe & Krankenversicherung</h2>
+            
+            <h3>Zuständigkeiten für DTAG-Beamte</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dein Status</th>
+                        <th>Zuständige Stelle</th>
+                        <th>Besonderheiten</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Während Insichbeurlaubung (ISB)</strong></td>
+                        <td>HUK-Coburg (Beihilfeablöseversicherung)</td>
+                        <td>Spezielle Regelung für beurlaubte Beamte</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Wieder aktiv bei DTAG</strong></td>
+                        <td>Postbeamtenkrankenkasse (PBeaKK)</td>
+                        <td>Nach Ende der ISB und Rückkehr in den Dienst</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Im Ruhestand / Pension</strong></td>
+                        <td>Bundesbeihilfe</td>
+                        <td>Normale Beamtenbeihilfe nach Bundesregelungen</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Beihilfesätze im Überblick</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Personenkreis</th>
+                        <th>Beihilfesatz</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Aktive Beamte ohne Kinder</td>
+                        <td>50%</td>
+                    </tr>
+                    <tr>
+                        <td>Aktive Beamte mit mindestens 1 Kind</td>
+                        <td>70%</td>
+                    </tr>
+                    <tr>
+                        <td>Versorgungsempfänger (Ruhestand)</td>
+                        <td>70%</td>
+                    </tr>
+                    <tr>
+                        <td>Ehegatten</td>
+                        <td>70%</td>
+                    </tr>
+                    <tr>
+                        <td>Kinder</td>
+                        <td>80%</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="info-box">
+                <strong>💡 TIPP:</strong> Die Zuständigkeit ändert sich automatisch je nach Status. Du musst nur beim Wechsel die entsprechende Stelle kontaktieren. Die Beihilfesätze bleiben dabei weitgehend gleich.
+            </div>
+            
+            <h3>Private Krankenversicherung (PKV)</h3>
+            
+            <p>Als Beamter bist du <strong>nicht in der gesetzlichen Krankenversicherung</strong> pflichtversichert. Du erhältst Beihilfe vom Dienstherrn und musst den Rest über eine private Krankenversicherung absichern.</p>
+            
+            <h4>Was übernimmt die PKV?</h4>
+            <ul>
+                <li>Den nicht von der Beihilfe gedeckten Anteil (z.B. 50% bei Aktiven ohne Kinder)</li>
+                <li>Zusätzliche Wahlleistungen nach gewähltem Tarif</li>
+                <li>Selbstbeteiligung optional wählbar zur Beitragssenkung</li>
+            </ul>
+            
+            <div class="warning-box">
+                <strong>⚠️ WICHTIG BEI RUHESTANDSEINTRITT:</strong><br>
+                Im Ruhestand steigt dein Beihilfesatz auf 70%. Deine PKV-Beiträge können daher im Ruhestand <strong>sinken</strong>, da weniger Restkosten abzudecken sind. Kläre dies frühzeitig mit deiner PKV!
+            </div>
+        </section>
+
+        <!-- ========== ALTERSTEILZEIT ========== -->
+        <section id="atz" class="section">
+            <h2>⏰ Altersteilzeit (ATZ)</h2>
+            
+            <div class="important-box">
+                <strong>📌 Die wichtigste Information:</strong> Du erhältst <span class="highlight">83% deines Netto-Gehalts</span> während der GESAMTEN ATZ-Phase!
+            </div>
+            
+            <h3>Was ist Altersteilzeit?</h3>
+            <p>Altersteilzeit ermöglicht dir einen gleitenden Übergang in den Ruhestand. Deine Arbeitszeit wird halbiert, du erhältst aber weiterhin einen Großteil deiner bisherigen Bezüge.</p>
+            
+            <h3>Besoldung während der ATZ</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Arbeitszeit</th>
+                        <th>Besoldung</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Aktivphase</strong></td>
+                        <td>Vollzeit (100%)</td>
+                        <td>83% vom Netto</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Passivphase</strong></td>
+                        <td>Freistellung (0%)</td>
+                        <td>83% vom Netto</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="success-box">
+                <strong>✅ BEISPIELRECHNUNG:</strong><br>
+                • Bisheriges Netto: 3.000 €<br>
+                • ATZ-Besoldung: <strong>2.490 €</strong> (83%)<br>
+                • Gilt für: <strong>Gesamte ATZ-Dauer</strong> (z.B. 3 Jahre)
+            </div>
+            
+            <h3>ATZ-Modelle</h3>
+            
+            <h4>1. Blockmodell (am häufigsten)</h4>
+            <ul>
+                <li>Erste Hälfte: Vollzeit arbeiten</li>
+                <li>Zweite Hälfte: Komplett freigestellt</li>
+                <li><strong>Beispiel:</strong> 3 Jahre ATZ = 1,5 Jahre Vollzeit + 1,5 Jahre frei</li>
+            </ul>
+            
+            <h4>2. Teilzeitmodell</h4>
+            <ul>
+                <li>Durchgehend halbe Arbeitszeit</li>
+                <li>Weniger üblich bei Beamten</li>
+                <li>Mehr Flexibilität im Alltag</li>
+            </ul>
+            
+            <h3>Voraussetzungen für ATZ</h3>
+            
+            <div class="grid">
+                <div class="card">
+                    <h4>Mindestalter</h4>
+                    <p>In der Regel 55-60 Jahre (abhängig von der Regelung deines Dienstherrn)</p>
+                </div>
+                <div class="card">
+                    <h4>Dienstzeit</h4>
+                    <p>Ausreichende ruhegehaltfähige Dienstzeit muss vorhanden sein</p>
+                </div>
+                <div class="card">
+                    <h4>Zustimmung</h4>
+                    <p>Dein Dienstherr muss der ATZ zustimmen (in der Regel kein Problem)</p>
+                </div>
+                <div class="card">
+                    <h4>Verfügbarkeit</h4>
+                    <p>ATZ-Plätze müssen verfügbar sein (Kontingent beachten)</p>
+                </div>
+            </div>
+            
+            <h3>Auswirkungen der ATZ</h3>
+            
+            <h4>Auf dein Ruhegehalt:</h4>
+            <ul>
+                <li>ATZ-Zeit wird als ruhegehaltfähige Dienstzeit angerechnet</li>
+                <li><strong>Aber:</strong> Nur mit 50% der tatsächlichen Zeit</li>
+                <li><strong>Vorteil:</strong> Kein Versorgungsabschlag, wenn du erst mit Regelaltersgrenze in Ruhestand gehst</li>
+            </ul>
+            
+            <div class="warning-box">
+                <strong>⚠️ BEISPIEL:</strong><br>
+                3 Jahre ATZ = nur 1,5 Jahre ruhegehaltfähige Dienstzeit für die Ruhegehaltberechnung.<br>
+                Dies reduziert deinen Ruhegehaltssatz geringfügig.
+            </div>
+            
+            <h3>So beantragst du ATZ</h3>
+            
+            <ol>
+                <li><strong>Frühzeitig informieren</strong> (mindestens 12 Monate vorher)</li>
+                <li><strong>Beratungsgespräch</strong> mit deiner Personalstelle vereinbaren</li>
+                <li><strong>ATZ-Antrag stellen</strong> (Fristen beachten!)</li>
+                <li><strong>ATZ-Vereinbarung</strong> abschließen</li>
+                <li><strong>Start</strong> zum vereinbarten Zeitpunkt</li>
+            </ol>
+            
+            <div class="info-box">
+                <strong>💡 PRAXIS-TIPP:</strong> Vereinbare frühzeitig ein Beratungsgespräch. Die Personalstelle kann dir genau ausrechnen, wie sich ATZ auf deine Versorgung auswirkt und welches Modell für dich am besten passt.
+            </div>
+            
+            <a href="https://versorgungsrechner.bund.de/lip/form/display.do?%24context=3F92DA388418DB04F0E5" class="btn" target="_blank">🧮 ATZ-Auswirkungen berechnen</a>
+        </section>
+
+        <!-- ========== AUSBILDUNGSZEITEN ========== -->
+        <section id="ausbildungszeiten" class="section">
+            <h2>🎓 Anrechnung von Ausbildungszeiten</h2>
+            
+            <h3>Welche Ausbildungszeiten werden angerechnet?</h3>
+            
+            <p>Bestimmte Ausbildungszeiten können als ruhegehaltfähige Dienstzeit angerechnet werden und erhöhen damit dein späteres Ruhegehalt.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ausbildungsart</th>
+                        <th>Anrechnung</th>
+                        <th>Maximum</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Berufsausbildung</strong></td>
+                        <td>Bis zu 3 Jahre</td>
+                        <td>3 Jahre</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hochschulstudium</strong></td>
+                        <td>Bis zu 3 Jahre</td>
+                        <td>3 Jahre</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fachschulausbildung</strong></td>
+                        <td>Bis zu 3 Jahre</td>
+                        <td>3 Jahre</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Promotion</strong></td>
+                        <td>Bis zu 3 Jahre (zusätzlich)</td>
+                        <td>3 Jahre</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="important-box">
+                <strong>📌 GESAMT-MAXIMUM:</strong><br>
+                Insgesamt können <strong>maximal 5 Jahre</strong> Ausbildungszeiten für die Berechnung des Ruhegehalts berücksichtigt werden (§ 12 BeamtVG).
+            </div>
+            
+            <h3>Was bedeutet das für dein Ruhegehalt?</h3>
+            
+            <div class="success-box">
+                <strong>✅ RECHENBEISPIEL:</strong><br>
+                <br>
+                <strong>Ohne Anrechnung:</strong><br>
+                • 30 Jahre Dienstzeit = 53,81% Ruhegehaltssatz<br>
+                • Bei 4.000 € ruhegehaltfähigen Bezügen = 2.152,40 € Ruhegehalt<br>
+                <br>
+                <strong>Mit 5 Jahren Ausbildungszeit:</strong><br>
+                • 35 Jahre Dienstzeit = 62,78% Ruhegehaltssatz<br>
+                • Bei 4.000 € ruhegehaltfähigen Bezügen = 2.511,20 € Ruhegehalt<br>
+                <br>
+                <strong>Differenz: +358,80 € pro Monat = 4.305,60 € pro Jahr!</strong>
+            </div>
+            
+            <h3>Voraussetzungen für die Anrechnung</h3>
+            
+            <ul>
+                <li>Die Ausbildung muss <strong>erfolgreich abgeschlossen</strong> worden sein</li>
+                <li>Sie muss <strong>vor der Berufung ins Beamtenverhältnis</strong> liegen</li>
+                <li>Die Ausbildung muss <strong>förderlich für die spätere Verwendung</strong> gewesen sein</li>
+                <li>Bei Hochschulstudium: Regelstudienzeit wird berücksichtigt</li>
+            </ul>
+            
+            <h3>So stellst du den Antrag</h3>
+            
+            <ol>
+                <li><strong>Nachweise sammeln:</strong>
+                    <ul>
+                        <li>Ausbildungszeugnisse</li>
+                        <li>Abschlusszeugnisse</li>
+                        <li>Studienbescheinigungen</li>
+                        <li>Promotionsurkunde</li>
+                    </ul>
+                </li>
+                <li><strong>Antrag stellen</strong> bei deiner Versorgungsstelle</li>
+                <li><strong>Prüfung</strong> durch die Behörde</li>
+                <li><strong>Bescheid</strong> über angerechnete Zeiten</li>
+            </ol>
+            
+            <div class="warning-box">
+                <strong>⚠️ WICHTIG:</strong><br>
+                Stelle den Antrag <strong>so früh wie möglich</strong>! Die Anrechnung erfolgt nicht automatisch. Manche Beamte vergessen dies und verschenken dadurch Ruhegehalt!
+            </div>
+            
+            <h3>Spezialfälle</h3>
+            
+            <h4>Mehrere Ausbildungen</h4>
+            <p>Hast du mehrere Ausbildungen (z.B. Berufsausbildung + Studium), werden diese zusammengerechnet – jedoch maximal 5 Jahre insgesamt.</p>
+            
+            <h4>Überlange Studienzeiten</h4>
+            <p>Bei Überschreitung der Regelstudienzeit wird in der Regel nur die Regelstudienzeit angerechnet (maximal 3 Jahre).</p>
+            
+            <h4>Ausbildung im Beamtenverhältnis</h4>
+            <p>Ausbildungszeiten, die bereits im Beamtenverhältnis zurückgelegt wurden (z.B. Vorbereitungsdienst), zählen vollständig als ruhegehaltfähige Dienstzeit.</p>
+            
+            <a href="#" class="btn">📄 Antrag auf Anrechnung (Formular)</a>
+        </section>
+
+        <!-- ========== VERSORGUNG & RUHEGEHALT ========== -->
+        <section id="versorgung" class="section">
+            <h2>🏦 Versorgung & Ruhegehalt</h2>
+            
+            <h3>Berechnung deines Ruhegehalts</h3>
+            
+            <div class="info-box">
+                <strong>FORMEL:</strong><br>
+                <span style="font-size: 1.2rem; font-weight: bold;">
+                    Ruhegehalt = Ruhegehaltfähige Bezüge × Ruhegehaltssatz - Versorgungsabschlag
+                </span>
+            </div>
+            
+            <h3>Der Ruhegehaltssatz</h3>
+            
+            <p>Pro Jahr ruhegehaltfähiger Dienstzeit erwirbst du <strong>1,79375%</strong> Ruhegehaltssatz.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dienstzeit</th>
+                        <th>Ruhegehaltssatz</th>
+                        <th>Beispiel bei 4.000 € Bezügen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10 Jahre</td>
+                        <td>17,94%</td>
+                        <td>717,60 €</td>
+                    </tr>
+                    <tr>
+                        <td>20 Jahre</td>
+                        <td>35,88%</td>
+                        <td>1.435,20 €</td>
+                    </tr>
+                    <tr>
+                        <td>25 Jahre</td>
+                        <td>44,84%</td>
+                        <td>1.793,60 €</td>
+                    </tr>
+                    <tr>
+                        <td>30 Jahre</td>
+                        <td>53,81%</td>
+                        <td>2.152,40 €</td>
+                    </tr>
+                    <tr>
+                        <td>35 Jahre</td>
+                        <td>62,78%</td>
+                        <td>2.511,20 €</td>
+                    </tr>
+                    <tr>
+                        <td><strong>40 Jahre (Maximum)</strong></td>
+                        <td><strong>71,75%</strong></td>
+                        <td><strong>2.870,00 €</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Versorgungsabschlag</h3>
+            
+            <p>Gehst du <strong>vor Erreichen der Regelaltersgrenze</strong> in Ruhestand, wird ein Abschlag berechnet:</p>
+            
+            <div class="warning-box">
+                <strong>BERECHNUNG:</strong><br>
+                <span style="font-size: 1.2rem; font-weight: bold;">
+                    0,3% pro Monat = 3,6% pro Jahr vorzeitiger Ruhestand
+                </span>
+            </div>
+            
+            <h4>Beispielrechnung Versorgungsabschlag:</h4>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ruhestand mit</th>
+                        <th>Statt mit</th>
+                        <th>Jahre früher</th>
+                        <th>Abschlag</th>
+                        <th>Bei 3.000 € Ruhegehalt</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>63 Jahren</td>
+                        <td>67 Jahren</td>
+                        <td>4 Jahre</td>
+                        <td>14,4%</td>
+                        <td>-432 € = <strong>2.568 €</strong></td>
+                    </tr>
+                    <tr>
+                        <td>64 Jahren</td>
+                        <td>67 Jahren</td>
+                        <td>3 Jahre</td>
+                        <td>10,8%</td>
+                        <td>-324 € = <strong>2.676 €</strong></td>
+                    </tr>
+                    <tr>
+                        <td>65 Jahren</td>
+                        <td>67 Jahren</td>
+                        <td>2 Jahre</td>
+                        <td>7,2%</td>
+                        <td>-216 € = <strong>2.784 €</strong></td>
+                    </tr>
+                    <tr>
+                        <td>66 Jahren</td>
+                        <td>67 Jahren</td>
+                        <td>1 Jahr</td>
+                        <td>3,6%</td>
+                        <td>-108 € = <strong>2.892 €</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="important-box">
+                <strong>📌 LEBENSLANGE AUSWIRKUNG:</strong><br>
+                Der Versorgungsabschlag gilt <strong>lebenslang</strong> und wird auch bei der Hinterbliebenenversorgung (Witwen-/Witwergeld) berücksichtigt!
+            </div>
+            
+            <h3>Abschlagsfreier Ruhestand</h3>
+            
+            <div class="success-box">
+                <strong>✅ KEIN ABSCHLAG bei:</strong><br>
+                <ul>
+                    <li><strong>Regelaltersgrenze erreicht</strong> (67 Jahre)</li>
+                    <li><strong>45 Dienstjahre + 65. Lebensjahr vollendet</strong></li>
+                    <li><strong>35 Dienstjahre + 63. Lebensjahr</strong> (bei bestimmten Voraussetzungen)</li>
+                    <li><strong>Dienstunfall</strong> (Unfallruhegehalt)</li>
+                    <li><strong>Besondere Altersgrenzen</strong> (z.B. Polizei, Feuerwehr)</li>
+                </ul>
+            </div>
+            
+            <h3>Sonderfälle</h3>
+            
+            <h4>Schwerbehinderung</h4>
+            <ul>
+                <li>Vorzeitiger Ruhestand ab 62 Jahren möglich</li>
+                <li>Versorgungsabschlag maximal 10,8% (begrenzt)</li>
+                <li>Abschlagsfrei ab 65 Jahren</li>
+            </ul>
+            
+            <h4>Dienstunfähigkeit (ohne Dienstunfall)</h4>
+            <ul>
+                <li>Versorgungsabschlag maximal 10,8%</li>
+                <li>Kein Abschlag bei 35 Dienstjahren + 63. Lebensjahr</li>
+                <li>Mindestversorgung gesichert</li>
+            </ul>
+            
+            <a href="https://versorgungsrechner.bund.de/lip/form/display.do?%24context=3F92DA388418DB04F0E5" class="btn" target="_blank">🧮 Versorgungsrechner</a>
+            <a href="#" class="btn btn-secondary">📄 Versorgungsauskunft anfordern</a>
+        </section>
+
+        <!-- ========== KRANKENVERSICHERUNG IM RUHESTAND ========== -->
+        <section id="krankenversicherung" class="section">
+            <h2>🏥 Krankenversicherung im Ruhestand</h2>
+            
+            <h3>Was ändert sich im Ruhestand?</h3>
+            
+            <div class="grid">
+                <div class="card">
+                    <h4>Beihilfesatz steigt</h4>
+                    <p>Von 50% (aktiv) auf <strong>70% (Ruhestand)</strong></p>
+                </div>
+                <div class="card">
+                    <h4>PKV-Beitrag sinkt</h4>
+                    <p>Durch höheren Beihilfesatz sinkt der abzusichernde Anteil</p>
+                </div>
+                <div class="card">
+                    <h4>Zusatzkosten möglich</h4>
+                    <p>PKV-Beitragsanpassungen durch Alter und medizinischen Fortschritt</p>
+                </div>
+            </div>
+            
+            <h3>Beihilfe im Ruhestand</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Personenkreis</th>
+                        <th>Beihilfesatz im Ruhestand</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Versorgungsempfänger</td>
+                        <td>70%</td>
+                    </tr>
+                    <tr>
+                        <td>Ehegatte des Versorgungsempfängers</td>
+                        <td>70%</td>
+                    </tr>
+                    <tr>
+                        <td>Kinder</td>
+                        <td>80%</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Private Krankenversicherung - Auswirkungen</h3>
+            
+            <h4>Beispielrechnung:</h4>
+            
+            <div class="success-box">
+                <strong>AKTIVER DIENST (50% Beihilfe):</strong><br>
+                • Gesamtkosten Krankheitsfall: 1.000 €<br>
+                • Beihilfe zahlt: 500 € (50%)<br>
+                • PKV muss absichern: 500 € (50%)<br>
+                • <strong>PKV-Beitrag: ca. 350 € monatlich</strong><br>
+                <br>
+                <strong>RUHESTAND (70% Beihilfe):</strong><br>
+                • Gesamtkosten Krankheitsfall: 1.000 €<br>
+                • Beihilfe zahlt: 700 € (70%)<br>
+                • PKV muss absichern: 300 € (30%)<br>
+                • <strong>PKV-Beitrag: ca. 210-250 € monatlich</strong><br>
+                <br>
+                <strong>Ersparnis: ca. 100-140 € pro Monat!</strong>
+            </div>
+            
+            <div class="warning-box">
+                <strong>⚠️ ABER BEACHTE:</strong><br>
+                • Alterungsrückstellungen in der PKV können Beiträge erhöhen<br>
+                • Medizinischer Fortschritt verteuert Leistungen<br>
+                • Manche Tarife haben Beitragssteigerungen im Alter<br>
+                • <strong>Frühzeitig mit PKV über Ruhestandsplanung sprechen!</strong>
+            </div>
+            
+            <h3>Wichtige Fragen zur PKV im Ruhestand</h3>
+            
+            <div class="faq-item">
+                <h4>Kann ich im Ruhestand in die GKV wechseln?</h4>
+                <p><strong>In der Regel nein.</strong> Als Beamter im Ruhestand bist du versicherungsfrei und kannst nicht in die gesetzliche Krankenversicherung wechseln. Du bleibst in der PKV und erhältst Beihilfe.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>Was passiert bei hohen PKV-Beiträgen im Alter?</h4>
+                <p>Du kannst in einen <strong>Basistarif</strong> oder <strong>Standardtarif</strong> deiner PKV wechseln. Diese sind beitragsgünstiger, bieten aber weniger Leistungen. Die Beihilfe bleibt unverändert bei 70%.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>Gibt es Zuschüsse zu PKV-Beiträgen im Ruhestand?</h4>
+                <p><strong>Ja!</strong> Als Versorgungsempfänger erhältst du einen Zuschuss zu deinen PKV-Beiträgen. Dieser orientiert sich am Arbeitgeberanteil zur GKV und wird direkt mit deinem Ruhegehalt ausgezahlt.</p>
+            </div>
+            
+            <h3>Checkliste Ruhestandsvorbereitung</h3>
+            
+            <ol>
+                <li>Gespräch mit PKV über Ruhestandstarife (1-2 Jahre vorher)</li>
+                <li>Beihilfestelle über Ruhestand informieren</li>
+                <li>Tarifwechsel prüfen (Basistarif vs. Komforttarif)</li>
+                <li>Beitragsanpassungen kalkulieren</li>
+                <li>Zuschuss zur PKV bei Versorgungsstelle beantragen</li>
+            </ol>
+            
+            <a href="#" class="btn">📋 Checkliste PKV-Ruhestand (PDF)</a>
+        </section>
+
+        <!-- ========== ENGAGIERTER RUHESTAND ========== -->
+        <section id="er" class="section">
+            <h2>🎯 Engagierter Ruhestand</h2>
+            
+            <h3>Was ist der Engagierte Ruhestand?</h3>
+            
+            <p>Der Engagierte Ruhestand ermöglicht dir, nach dem Ruhestandseintritt weiterhin gesellschaftlich aktiv zu bleiben, ohne dass dein Ruhegehalt (bis zu bestimmten Grenzen) gekürzt wird.</p>
+            
+            <div class="important-box">
+                <strong>📌 VERPFLICHTUNG:</strong><br>
+                Als Teil des ER-Antrags musst du dich zu einer Form des gesellschaftlichen Engagements verpflichten. Dies muss in den <strong>ersten 3 Jahren des Ruhestands</strong> nachgewiesen werden.
+            </div>
+            
+            <h3>Drei Optionen für gesellschaftliches Engagement</h3>
+            
+            <div class="grid">
+                <div class="card">
+                    <h4>1. Familienpflegetätigkeit</h4>
+                    <p><strong>Voraussetzung:</strong><br>
+                    Mindestens am ersten Tag des Ruhestands wird ein Kind unter 18 Jahren oder ein pflegebedürftiger Angehöriger tatsächlich betreut/gepflegt.</p>
+                </div>
+                <div class="card">
+                    <h4>2. Ehrenamt</h4>
+                    <p><strong>Voraussetzung:</strong><br>
+                    Mindestens 1.000 Stunden innerhalb von drei Jahren nach der Zuruhesetzung bei einer geeigneten Körperschaft.</p>
+                </div>
+                <div class="card">
+                    <h4>3. Bundesfreiwilligendienst</h4>
+                    <p><strong>Voraussetzung:</strong><br>
+                    Mindestens 12 Monate innerhalb von drei Jahren nach der Zuruhesetzung.</p>
+                </div>
+            </div>
+            
+            <h3>Wichtige Informationen für DTAG-Beamte</h3>
+            
+            <div class="warning-box">
+                <strong>⚠️ GENEHMIGUNGSVERFAHREN:</strong><br>
+                <ul>
+                    <li><strong>Die DTAG prüft NICHT</strong> im Vorfeld!</li>
+                    <li>Die DTAG spricht <strong>keine Zu- oder Absage</strong> aus!</li>
+                    <li>Die Anerkennung erfolgt <strong>ausschließlich durch die Bundesanstalt für Post und Telekommunikation (BAnstPT)</strong></li>
+                    <li>Ein Leitfaden mit Voraussetzungen ist verfügbar</li>
+                </ul>
+            </div>
+            
+            <h3>Ehrenamt - Details</h3>
+            
+            <h4>Was gilt als geeignetes Ehrenamt?</h4>
+            <ul>
+                <li>Tätigkeiten bei gemeinnützigen Organisationen</li>
+                <li>Vereinsarbeit (Vorstand, Trainer, etc.)</li>
+                <li>Soziale Einrichtungen (Tafel, Flüchtlingshilfe, etc.)</li>
+                <li>Bildungseinrichtungen (Nachhilfe, Mentoring, etc.)</li>
+                <li>Kulturelle Institutionen (Museen, Theater, etc.)</li>
+            </ul>
+            
+            <h4>Dokumentation der Stunden</h4>
+            <div class="info-box">
+                <strong>💡 WICHTIG:</strong> Führe ein <strong>Tätigkeitsnachweis</strong>!<br>
+                • Datum und Uhrzeit der Tätigkeit<br>
+                • Art der Tätigkeit<br>
+                • Dauer in Stunden<br>
+                • Bestätigung durch die Organisation<br>
+                <br>
+                <strong>1.000 Stunden in 3 Jahren = ca. 333 Stunden pro Jahr = ca. 28 Stunden pro Monat = ca. 6-7 Stunden pro Woche</strong>
+            </div>
+            
+            <h3>Bundesfreiwilligendienst</h3>
+            
+            <h4>Besonderheiten:</h4>
+            <ul>
+                <li>Offizieller Freiwilligendienst für alle Altersgruppen</li>
+                <li>Mindestdauer: 6 Monate (für ER: 12 Monate erforderlich)</li>
+                <li>In der Regel Vollzeit, aber auch Teilzeit möglich</li>
+                <li>Taschengeld und Sozialversicherung werden übernommen</li>
+                <li>Vorteil: Strukturiertes Programm mit Begleitung</li>
+            </ul>
+            
+            <h3>Familienpflegetätigkeit</h3>
+            
+            <h4>Was wird anerkannt?</h4>
+            <ul>
+                <li>Betreuung eigener Kinder unter 18 Jahren</li>
+                <li>Pflege pflegebedürftiger Angehöriger (Pflegegrad erforderlich)</li>
+                <li>Muss am ersten Tag des Ruhestands nachweisbar sein</li>
+                <li>Keine Mindestdauer vorgeschrieben</li>
+            </ul>
+            
+            <h3>Hinzuverdienst und Engagement</h3>
+            
+            <div class="warning-box">
+                <strong>⚠️ HINZUVERDIENSTREGELUNGEN BEACHTEN:</strong><br>
+                <strong>Grundregel:</strong> Ruhegehalt + Hinzuverdienst dürfen zusammen nicht mehr als die letzten ruhegehaltfähigen Bezüge betragen (+ Freibeträge).<br>
+                <br>
+                <strong>Ehrenamt ist in der Regel unproblematisch</strong>, da es unentgeltlich ist.<br>
+                <strong>Bei Aufwandsentschädigungen</strong>: Prüfen, ob diese auf den Hinzuverdienst angerechnet werden!
+            </div>
+            
+            <h3>So gehst du vor</h3>
+            
+            <ol>
+                <li><strong>Vor Ruhestandsantritt:</strong>
+                    <ul>
+                        <li>Leitfaden der BAnstPT lesen</li>
+                        <li>Engagement-Option wählen</li>
+                        <li>Bei Ehrenamt: Organisation/Verein suchen</li>
+                    </ul>
+                </li>
+                <li><strong>Im ER-Antrag:</strong>
+                    <ul>
+                        <li>Verpflichtung zum gesellschaftlichen Engagement erklären</li>
+                        <li>Gewählte Option angeben</li>
+                    </ul>
+                </li>
+                <li><strong>In den ersten 3 Jahren:</strong>
+                    <ul>
+                        <li>Engagement ausüben und dokumentieren</li>
+                        <li>Nachweise sammeln (Tätigkeitsnachweise, Bestätigungen)</li>
+                    </ul>
+                </li>
+                <li><strong>Nach 3 Jahren:</strong>
+                    <ul>
+                        <li>Nachweise bei BAnstPT einreichen</li>
+                        <li>Anerkennung erhalten</li>
+                    </ul>
+                </li>
+            </ol>
+            
+            <a href="https://yam-united.telekom.com/pages/engagierter-ruhestand-fuer-beamtinnen-und-beamte/apps/content/home" class="btn" target="_blank">🎯 ER-Intranet</a>
+            <a href="https://yam-united.telekom.com/pages/engagierter-ruhestand-fuer-beamtinnen-und-beamte/apps/wiki/wiki/list/view/0d75e887-6d94-4f7f-9da8-a0bd0dd788bc" class="btn btn-secondary" target="_blank">📖 Leitfaden Ehrenamt</a>
+        </section>
+
+        <!-- ========== KARRIERE ========== -->
+        <section id="karriere" class="section">
+            <h2>🚀 Karrierechancen & Wechselmöglichkeiten</h2>
+            
+            <h3>Aktuelle Chancen für DTAG-Beamte (2025/26)</h3>
+            
+            <p>Als DTAG-Beamter hast du derzeit <strong>sehr gute Wechselchancen</strong> in den öffentlichen Dienst! Viele Behörden und öffentliche Unternehmen suchen erfahrene Fachkräfte.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Arbeitgeber</th>
+                        <th>Stellen 2025/26</th>
+                        <th>Bereich</th>
+                        <th>Standorte</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Bundeswehr</strong></td>
+                        <td>1.000</td>
+                        <td>Verwaltung (mD)</td>
+                        <td>Bundesweit</td>
+                    </tr>
+                    <tr>
+                        <td><strong>BWI GmbH</strong></td>
+                        <td>450</td>
+                        <td>IT</td>
+                        <td>Bundesweit</td>
+                    </tr>
+                    <tr>
+                        <td><strong>BA-IT Systemhaus</strong></td>
+                        <td>350</td>
+                        <td>IT, HR</td>
+                        <td>Nürnberg, Düsseldorf, Krefeld</td>
+                    </tr>
+                    <tr>
+                        <td><strong>THW</strong></td>
+                        <td>350</td>
+                        <td>Verwaltung</td>
+                        <td>Bundesweit</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bundesdruckerei</strong></td>
+                        <td>185</td>
+                        <td>IT, Verwaltung</td>
+                        <td>Berlin, Hamburg, München, Bonn</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ITZ Bund</strong></td>
+                        <td>In Klärung</td>
+                        <td>IT</td>
+                        <td>Bonn, Berlin</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DRV Bund</strong></td>
+                        <td>100</td>
+                        <td>IT</td>
+                        <td>Berlin, Würzburg</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="success-box">
+                <strong>💼 ZUSÄTZLICH:</strong><br>
+                Über <strong>10.000 weitere Stellen</strong> auf interamt.de bei Bund, Ländern und Kommunen!
+            </div>
+            
+            <h3>nextJOB - Deine Unterstützung beim Wechsel</h3>
+            
+            <p>Das nextJOB-Programm unterstützt DTAG-Beamte beim Wechsel in den öffentlichen Dienst:</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <h4>Beratung</h4>
+                    <p>Individuelle Beratung zu Wechselmöglichkeiten, Besoldung und Konditionen</p>
+                </div>
+                <div class="card">
+                    <h4>Veranstaltungen</h4>
+                    <p>Info-Veranstaltungen zu Top-Arbeitgebern (BWI, Bundeswehr, etc.)</p>
+                </div>
+                <div class="card">
+                    <h4>Vermittlung</h4>
+                    <p>Direkte Kontakte zu Personalverantwortlichen und Vermittlung von Stellen</p>
+                </div>
+                <div class="card">
+                    <h4>Bewerbungsunterstützung</h4>
+                    <p>Hilfe bei Bewerbungsunterlagen und Vorbereitung auf Auswahlverfahren</p>
+                </div>
+            </div>
+            
+            <h3>Wechselmodalitäten</h3>
+            
+            <h4>Versetzung</h4>
+            <ul>
+                <li>Mit Zustimmung beider Dienstherren</li>
+                <li>Status, Besoldung und Versorgungsansprüche bleiben erhalten</li>
+                <li>Empfohlen bei dauerhaftem Wechsel</li>
+            </ul>
+            
+            <h4>Abordnung</h4>
+            <ul>
+                <li>Zeitlich befristet (z.B. 2-3 Jahre)</li>
+                <li>"Probe-Zeit" beim neuen Arbeitgeber</li>
+                <li>Rückkehrrecht zur DTAG bleibt bestehen</li>
+            </ul>
+            
+            <h3>Was bleibt beim Wechsel erhalten?</h3>
+            
+            <div class="success-box">
+                <strong>✅ BLEIBEN ERHALTEN:</strong><br>
+                • Beamtenstatus<br>
+                • Ruhegehaltfähige Dienstzeiten<br>
+                • Besoldungsgruppe (in der Regel)<br>
+                • Versorgungsansprüche<br>
+                • Beihilfeansprüche<br>
+            </div>
+            
+            <div class="info-box">
+                <strong>💡 KÖNNEN SICH ÄNDERN:</strong><br>
+                • Konkrete Besoldungshöhe (PNU vs. Bund-Tabelle)<br>
+                • Zulagen und Zuschläge<br>
+                • Arbeitsort und Arbeitszeiten<br>
+            </div>
+            
+            <a href="https://yam-united.telekom.com/pages/nextjob/apps/content/infos-fuer-beamte" class="btn" target="_blank">🚀 nextJOB für Beamte</a>
+            <a href="https://www.interamt.de" class="btn btn-secondary" target="_blank">💼 interamt.de</a>
+        </section>
+
+        <!-- ========== TOOLS & RECHNER ========== -->
+        <section id="tools" class="section">
+            <h2>🛠️ Tools & Rechner</h2>
+            
+            <h3>Wichtige Online-Tools</h3>
+            
+            <div class="grid">
+                <div class="card">
+                    <h4>🧮 Versorgungsrechner</h4>
+                    <p>Berechne dein voraussichtliches Ruhegehalt unter Berücksichtigung von Dienstzeit, Versorgungsabschlag und weiteren Faktoren.</p>
+                    <p><strong>Offizieller Rechner der BAnstPT</strong></p>
+                    <a href="https://versorgungsrechner.bund.de/lip/form/display.do?%24context=3F92DA388418DB04F0E5" class="btn" target="_blank">Zum Rechner</a>
+                </div>
+                
+                <div class="card">
+                    <h4>📊 Besoldungstabellen PNU</h4>
+                    <p>Aktuelle Besoldungstabellen für aktive DTAG-Beamte und Beamte nach ISB.</p>
+                    <p><strong>Gültig während deiner aktiven Dienstzeit</strong></p>
+                    <a href="https://oeffentlicher-dienst.info/beamte/post/" class="btn" target="_blank">Zu den Tabellen</a>
+                </div>
+                
+                <div class="card">
+                    <h4>📊 Besoldungstabellen Bund</h4>
+                    <p>Besoldungstabellen für Ruhestandsbeamte. Diese gelten ab deinem Ruhestandseintritt.</p>
+                    <p><strong>Wichtig für Ruhestandsplanung!</strong></p>
+                    <a href="https://oeffentlicher-dienst.info/beamte/bund/" class="btn" target="_blank">Zu den Tabellen</a>
+                </div>
+                
+                <div class="card">
+                    <h4>🎯 Engagierter Ruhestand</h4>
+                    <p>Alle Informationen zum Engagierten Ruhestand, Leitfäden und Voraussetzungen für Ehrenamt.</p>
+                    <p><strong>YAMU Intranet-Seite</strong></p>
+                    <a href="https://yam-united.telekom.com/pages/engagierter-ruhestand-fuer-beamtinnen-und-beamte/apps/content/home" class="btn" target="_blank">Zum ER-Portal</a>
+                </div>
+                
+                <div class="card">
+                    <h4>🚀 nextJOB</h4>
+                    <p>Karrierechancen und Wechselmöglichkeiten für DTAG-Beamte in den öffentlichen Dienst.</p>
+                    <p><strong>Beratung & Vermittlung</strong></p>
+                    <a href="https://yam-united.telekom.com/pages/nextjob/apps/content/infos-fuer-beamte" class="btn" target="_blank">Zu nextJOB</a>
+                </div>
+                
+                <div class="card">
+                    <h4>💼 interamt.de</h4>
+                    <p>Das größte Stellenportal für den öffentlichen Dienst mit über 10.000 aktuellen Stellenangeboten.</p>
+                    <p><strong>Bund, Länder, Kommunen</strong></p>
+                    <a href="https://www.interamt.de" class="btn" target="_blank">Zum Stellenportal</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== FAQ ========== -->
+        <section id="faq" class="section">
+            <h2>❓ Häufig gestellte Fragen (FAQ)</h2>
+            
+            <h3>Besoldung & Beihilfe</h3>
+            
+            <div class="faq-item">
+                <h4>Warum gibt es zwei verschiedene Besoldungstabellen?</h4>
+                <p>Als Postnachfolgeunternehmen (PNU) hat die DTAG eigene Besoldungstabellen für aktive Beamte. Im Ruhestand wirst du jedoch nach den Bundesbesoldungsregelungen versorgt. Daher musst du für deine Ruhestandsplanung mit den Bund-Tabellen rechnen, nicht mit den PNU-Tabellen!</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>Wechselt die Beihilfe-Zuständigkeit automatisch?</h4>
+                <p>Nein, du musst dich aktiv bei der neuen Stelle melden. Beim Wechsel von ISB zurück in den aktiven Dienst meldest du dich bei der PBeaKK. Beim Ruhestandseintritt informierst du die Versorgungsstelle, die dann die Bundesbeihilfe regelt.</p>
+            </div>
+            
+            <h3>Altersteilzeit</h3>
+            
+            <div class="faq-item">
+                <h4>Kann ich ATZ jederzeit beantragen?</h4>
+                <p>Nein, du musst das Mindestalter erreicht haben (in der Regel 55-60 Jahre) und die erforderliche Dienstzeit vorweisen. Außerdem gibt es Antragsfristen, die du beachten musst. Plane daher mindestens 12 Monate im Voraus!</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>Gilt die 83%-Regelung wirklich für die gesamte Zeit?</h4>
+                <p>Ja! Du erhältst 83% deines Netto-Gehalts sowohl während der Aktivphase (wenn du noch arbeitest) als auch während der Passivphase (Freistellung). Dies gilt über die gesamte ATZ-Dauer.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>Wie wirkt sich ATZ auf mein Ruhegehalt aus?</h4>
+                <p>Die ATZ-Zeit wird nur zu 50% als ruhegehaltfähige Dienstzeit angerechnet. Bei 3 Jahren ATZ werden also nur 1,5 Jahre für die Ruhegehaltberechnung berücksichtigt. Dein Ruhegehaltssatz steigt daher langsamer. Dafür entfällt der Versorgungsabschlag, wenn du mit Regelaltersgrenze in Ruhestand gehst.</p>
+            </div>
+            
+            <h3>Versorgung & Ruhestand</h3>
+            
+            <div class="faq-item">
+                <h4>Lohnt sich ein vorzeitiger Ruhestand finanziell?</h4>
+                <p>Das kommt auf deine individuelle Situation an. Der Versorgungsabschlag (3,6% pro Jahr früher) wirkt sich <strong>lebenslang</strong> aus. Nutze den Versorgungsrechner und lass dich beraten! In vielen Fällen ist es finanziell sinnvoller, bis zur Regelaltersgrenze zu arbeiten oder ATZ zu nutzen.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>Kann ich den Versorgungsabschlag nachträglich ausgleichen?</h4>
+                <p>Nein, der Versorgungsabschlag ist <strong>dauerhaft und unumkehrbar</strong>. Du kannst ihn nicht nachträglich ausgleichen oder zurückkaufen. Deshalb ist eine sorgfältige Planung so wichtig!</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>Was passiert mit meinem Ruhegehalt, wenn ich hinzuverdiene?</h4>
+                <p>Grundsätzlich gilt: Ruhegehalt + Hinzuverdienst dürfen zusammen nicht mehr als die letzten ruhegehaltfähigen Bezüge (+ bestimmte Freibeträge) betragen. Wird diese Grenze überschritten, wird das Ruhegehalt entsprechend gekürzt. Lass dich vorab von der Versorgungsstelle beraten!</p>
+            </div>
+            
+            <h3>Ausbildungszeiten</h3>
+            
+            <div class="faq-item">
+                <h4>Werden Ausbildungszeiten automatisch angerechnet?</h4>
+                <p><strong>Nein!</strong> Du musst einen Antrag bei deiner Versorgungsstelle stellen und die erforderlichen Nachweise vorlegen (Zeugnisse, Bescheinigungen). Viele Beamte vergessen dies und verschenken dadurch Ruhegehalt!</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>Kann ich mehrere Ausbildungen anrechnen lassen?</h4>
+                <p>Ja, aber insgesamt maximal 5 Jahre. Wenn du z.B. eine Berufsausbildung (3 Jahre) und ein Studium (3 Jahre) hast, werden davon maximal 5 Jahre berücksichtigt.</p>
+            </div>
+            
+            <h3>Engagierter Ruhestand</h3>
+            
+            <div class="faq-item">
+                <h4>Muss ich mein Ehrenamt bei der DTAG anmelden?</h4>
+                <p><strong>Nein!</strong> Die DTAG prüft dein geplantes Ehrenamt nicht und spricht auch keine Zu- oder Absage aus. Die Anerkennung erfolgt ausschließlich durch die Bundesanstalt für Post und Telekommunikation (BAnstPT). Wende dich direkt an die BAnstPT.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>Was passiert, wenn ich die 1.000 Stunden nicht erreiche?</h4>
+                <p>Die Nichterfüllung der Verpflichtung zum gesellschaftlichen Engagement kann zu Konsequenzen führen, da dies Teil deines ER-Antrags war. Im Extremfall könnte dies als Verstoß gegen die Beamtenpflichten gewertet werden. Achte daher darauf, die Verpflichtung zu erfüllen oder frühzeitig Kontakt zur BAnstPT aufzunehmen, wenn Probleme absehbar sind.</p>
+            </div>
+            
+            <h3>Karriere & Wechsel</h3>
+            
+            <div class="faq-item">
+                <h4>Verliere ich beim Wechsel zu einem anderen Dienstherrn meine Versorgungsansprüche?</h4>
+                <p><strong>Nein!</strong> Bei einer Versetzung oder Abordnung bleiben dein Beamtenstatus, deine ruhegehaltfähigen Dienstzeiten und deine Versorgungsansprüche vollständig erhalten. Nur die konkrete Besoldungshöhe kann sich ändern (z.B. PNU-Tabelle vs. Bund-Tabelle).</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>Kann ich als DTAG-Beamter zu jeder Behörde wechseln?</h4>
+                <p>Grundsätzlich ja, aber beide Dienstherren (DTAG und neuer Arbeitgeber) müssen zustimmen. Bei strukturierten Programmen wie nextJOB ist die Zustimmung in der Regel gegeben. Bei Individualwünschen solltest du vorab das Gespräch mit deiner Personalstelle suchen.</p>
+            </div>
+            
+            <h3>Krankenversicherung</h3>
+            
+            <div class="faq-item">
+                <h4>Kann ich im Ruhestand in die GKV wechseln?</h4>
+                <p>In der Regel <strong>nein</strong>. Als Beamter im Ruhestand bist du versicherungsfrei in der GKV und kannst normalerweise nicht wechseln. Du bleibst in der PKV und erhältst 70% Beihilfe. In Ausnahmefällen (z.B. bei Entlassung aus dem Beamtenverhältnis) kann ein Wechsel möglich sein.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>Steigen meine PKV-Beiträge im Ruhestand?</h4>
+                <p>Das kommt darauf an. Durch den höheren Beihilfesatz (70% statt 50%) sinkt der abzusichernde Anteil, was die Beiträge senken kann. Gleichzeitig gibt es alterungsbedingte Beitragssteigerungen. Die tatsächliche Entwicklung hängt von deinem konkreten Tarif ab. Sprich frühzeitig mit deiner PKV!</p>
+            </div>
+        </section>
+
+        <!-- ========== KONTAKT ========== -->
+        <section id="kontakt" class="section">
+            <h2>📞 Kontakt & Beratung</h2>
+            
+            <h3>Deine Ansprechpartner</h3>
+            
+            <div class="grid">
+                <div class="card">
+                    <h4>Besoldung & Beihilfe</h4>
+                    <p><strong>Deine Personalstelle</strong></p>
+                    <p>Für Fragen zu aktueller Besoldung, Zulagen, Beihilfe im aktiven Dienst</p>
+                    <p>[Kontaktdaten einfügen]</p>
+                </div>
+                
+                <div class="card">
+                    <h4>Versorgung & Ruhestand</h4>
+                    <p><strong>Versorgungsstelle</strong></p>
+                    <p>Für Fragen zu Ruhegehalt, Versorgungsabschlag, Ausbildungszeiten</p>
+                    <p>[Kontaktdaten einfügen]</p>
+                </div>
+                
+                <div class="card">
+                    <h4>Altersteilzeit</h4>
+                    <p><strong>Personalstelle / ATZ-Beratung</strong></p>
+                    <p>Für Beratung und Antragstellung zur Altersteilzeit</p>
+                    <p>[Kontaktdaten einfügen]</p>
+                </div>
+                
+                <div class="card">
+                    <h4>Engagierter Ruhestand</h4>
+                    <p><strong>Bundesanstalt für Post und Telekommunikation</strong></p>
+                    <p>Für Anerkennung des gesellschaftlichen Engagements</p>
+                    <p><strong>NICHT die DTAG!</strong></p>
+                    <p>[Kontaktdaten BAnstPT einfügen]</p>
+                </div>
+                
+                <div class="card">
+                    <h4>Karriere & Wechsel</h4>
+                    <p><strong>nextJOB-Team</strong></p>
+                    <p>Für Beratung zu Wechselmöglichkeiten und Karrierechancen</p>
+                    <p><a href="https://yam-united.telekom.com/pages/nextjob/" target="_blank">YAMU: nextJOB</a></p>
+                </div>
+                
+                <div class="card">
+                    <h4>Krankenversicherung</h4>
+                    <p><strong>Aktiv:</strong> Postbeamtenkrankenkasse<br>
+                    <strong>ISB:</strong> HUK-Coburg<br>
+                    <strong>Ruhestand:</strong> Versorgungsstelle</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <div class="footer">
+        <p><strong>Beamten-Portal DTAG</strong></p>
+        <p>Stand: Januar 2026 | Diese Seite wird regelmäßig aktualisiert</p>
+        <p>Bei Fragen oder Anregungen zu dieser Seite wende dich bitte an deine Elisabeth und Stephan</p>
+    </div>
+</body>
+</html>
